@@ -98,6 +98,7 @@ body{
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 15px;
+    overflow: hidden;
 }
 .todo-app h2{
     color: #002765;
@@ -124,7 +125,8 @@ body{
     background: transparent;
     padding: 10px;
     font-weight: 14px;
-    
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .row button{
     border: none;
@@ -141,10 +143,13 @@ body{
 ul li{
     list-style: none;
     font-size: 17px;
-    padding: 12px 8px 12px 50px;
+    padding: 12px 50px 12px 50px;
     user-select: none;
     cursor: pointer;
     position: relative;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 ul li::before{
     content: '';
@@ -171,7 +176,7 @@ ul li.checked::before{
 } */
 ul li span{
     position: absolute;
-    right: 0;
+    right: 10px;
     top: 8px;
     width: 40px;
     height: 40px;
@@ -183,5 +188,11 @@ ul li span{
 }
 ul li span:hover{
     background: #edeef0;
+}
+
+.list-container {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 20px;
 }
 
