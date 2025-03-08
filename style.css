@@ -13,7 +13,80 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-.container{
+
+/* Navigation */
+.navbar {
+    padding: 1rem 0;
+    /* background: white; */
+    background: #161616;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 70px;
+  }
+  
+  .navbar img {
+    /* width: 150px; */
+    padding-left: 20px;
+  }
+  
+  .logo {
+    width: 70px;
+    height: 40px;
+    /* border-radius: 50%; */
+    object-fit: contain;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding-right: 20px;
+    text-align: center;
+  }
+  .nav-menu li a {
+    /* color: #d2691e; */
+    /* font-weight: bold; */
+    font-size: 18px;
+
+  }
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 11px;
+      position: relative;
+    }
+    nav ul li a::after {
+      content: "";
+      width: 0;
+      height: 3px;
+      background: tomato;
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      transition: 0.5s;
+    }
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+  
+  
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+  }
+
+/* To-Do List */
+
+.container-1{
     width: 100%;
     min-height: 100vh;
     padding: 10px;
