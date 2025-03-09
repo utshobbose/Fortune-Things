@@ -15,12 +15,29 @@
             <!-- <button class="hamburger" onclick="toggleMenu()">☰</button> -->
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="/index.html">Home</a></li>
-                <li><a href="#stopwatch">StopWatch</a></li>
+                <li><a href="#stopwatch" class="smooth-scroll">StopWatch</a></li>
                 <li><a href="/todo.html" target="_blank">To-Do List</a></li>
 
             </ul>
         </div>
     </nav>
+
+
+    <section id="stopwatch" class="stopwatch-section">
+        <div class="stopwatch-container">
+            <h2>Special Stopwatch</h2>
+            <div class="timer-display">00:00:00</div>
+            <div class="controls">
+                <button id="startBtn" class="control-btn">Start</button>
+                <button id="stopBtn" class="control-btn">Stop</button>
+                <button id="resetBtn" class="control-btn">Reset</button>
+            </div>
+            <p class="timer-info">Counts in 3-second intervals up to 30 seconds</p>
+        </div>
+    </section>
+    
+
+    <script src="/stopwatch.js"></script>
 
 </body>
 </html>
