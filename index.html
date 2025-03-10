@@ -1,4 +1,4 @@
-<!-- This is the page for the fortune teller -->
+<!-- This is the page for the fortune teller and stopwatch -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +11,7 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <img src="images/Fortune Things.jpg" alt="Logo" class="logo"> 
-            <!-- <button class="hamburger" onclick="toggleMenu()">☰</button> -->
+           <a href="/index.html"><img src="images/Fortune Things.jpg" alt="Logo" class="logo" ></a>  
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="#stopwatch" class="smooth-scroll">StopWatch</a></li>
@@ -23,10 +22,25 @@
     </nav>
 
 
+    <!-- Fortune Teller Section -->
+    <section class="fortune-section">
+        <div class="fortune-box" id="fortuneBox">
+            <p id="fortuneText"></p>
+            <div class="color-buttons">
+                <button class="btn-green" onclick="setGreenTheme()">Green</button>
+                <button class="btn-red" onclick="setRedTheme()">Red</button>
+                <button class="btn-yellow" onclick="setYellowTheme()">Yellow</button>
+                <button class="btn-blue" onclick="setBlueTheme()">Blue</button>
+            </div>
+        </div>
+    </section>
+    <script src="/tellfortune.js"></script>
+
+    <!--Stopwatch Section-->
     <section id="stopwatch" class="stopwatch-section">
         <div class="stopwatch-container">
             <h2>Special Stopwatch</h2>
-            <div class="timer-display">00:00:00</div>
+            <div class="timer-display"></div>
             <div class="controls">
                 <button id="startBtn" class="control-btn">Start</button>
                 <button id="stopBtn" class="control-btn">Stop</button>
@@ -35,6 +49,11 @@
             <p class="timer-info">Counts in 3-second intervals up to 30 seconds</p>
         </div>
     </section>
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Fortune Things. All rights reserved by Bose.</p>
+        </div>
+    </footer>
     
 
     <script src="/stopwatch.js"></script>

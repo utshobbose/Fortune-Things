@@ -60,12 +60,13 @@ body{
       color: #fff;
       font-size: 11px;
       position: relative;
+      
     }
     nav ul li a::after {
       content: "";
       width: 0;
       height: 3px;
-      background: tomato;
+      background: linear-gradient(to right, rgb(73, 6, 6), rgb(121, 121, 31), rgb(139, 145, 139), rgb(113, 113, 156));
       position: absolute;
       left: 0;
       bottom: -6px;
@@ -76,13 +77,6 @@ body{
     }
   
   
-  .hamburger {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: white;
-  }
 
 /* To-Do List */
 
@@ -94,14 +88,14 @@ body{
 .todo-app{
     width: 100%;
     max-width: 540px;
-    background: white;
+    background: black;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 15px;
     overflow: hidden;
 }
 .todo-app h2{
-    color: #002765;
+    color: antiquewhite;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -127,6 +121,7 @@ body{
     font-weight: 14px;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: black;
 }
 .row button{
     border: none;
@@ -150,13 +145,15 @@ ul li{
     word-wrap: break-word;
     overflow-wrap: break-word;
     max-width: 100%;
+    color: antiquewhite;
 }
-ul li::before{
+
+.list-container li::before{
     content: '';
     position: absolute;
     height: 28px;
     width: 28px;
-    background-image: url(./images/unchecked.png);
+    background-image: url(./images/uncheck_50px.png);
     background-size: cover;
     background-position: center;
     top: 13px;
@@ -165,11 +162,12 @@ ul li::before{
 
 }
 ul li.checked{
-    color: #555;
+    color: antiquewhite;
     text-decoration: line-through;
 }
 ul li.checked::before{
-    background-image: url(./images/checked.png);
+    background-image: url(./images/whitecheck.png);
+    color: antiquewhite;
 }
 /* ul li.list-container{
     top: 88px;
@@ -188,6 +186,7 @@ ul li span{
 }
 ul li span:hover{
     background: #edeef0;
+    color:#161616
 }
 
 .list-container {
@@ -196,3 +195,9 @@ ul li span:hover{
     margin-top: 20px;
 }
 
+.footer-content{
+  background-color: #161616;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}

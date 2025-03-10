@@ -5,75 +5,155 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: url('./images/FortuneKills.jpeg');
+    background-size: cover;
+    height: 100vh;
+    min-height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    
+}
+
 /* Navigation */
 .navbar {
-    padding: 1rem 0;
-    /* background: white; */
-    background: #161616;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    height: 70px;
-  }
-  
-  .navbar img {
-    /* width: 150px; */
-    padding-left: 20px;
-  }
-  
-  .logo {
-    width: 70px;
-    height: 40px;
-    /* border-radius: 50%; */
-    object-fit: contain;
-  }
-  
-  .nav-menu {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    padding-right: 20px;
-    text-align: center;
-  }
-  .nav-menu li a {
-    /* color: #d2691e; */
-    /* font-weight: bold; */
-    font-size: 18px;
+  padding: 1rem 0;
+  /* background: white; */
+  background: #161616;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 70px;
+}
 
+.navbar img {
+  /* width: 150px; */
+  padding-left: 20px;
+}
+
+.logo {
+  width: 70px;
+  height: 40px;
+  /* border-radius: 50%; */
+  object-fit: contain;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding-right: 20px;
+  text-align: center;
+}
+.nav-menu li a {
+  /* color: #d2691e; */
+  /* font-weight: bold; */
+  font-size: 18px;
+  margin: 0 50px;
+
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 11px;
+    position: relative;
+    
   }
-  .navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
+  nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, rgb(73, 6, 6), rgb(121, 121, 31), rgb(139, 145, 139), rgb(113, 113, 156));;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
   }
-  
-  nav ul li a {
-      text-decoration: none;
-      color: #fff;
-      font-size: 11px;
-      position: relative;
-    }
-    nav ul li a::after {
-      content: "";
-      width: 0;
-      height: 3px;
-      background: tomato;
-      position: absolute;
-      left: 0;
-      bottom: -6px;
-      transition: 0.5s;
-    }
-    nav ul li a:hover::after {
-      width: 100%;
-    }
-  
-  
-  .hamburger {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: white;
+  nav ul li a:hover::after {
+    width: 100%;
   }
+
+
+
+
+/* Fortune Section */
+.fortune-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.fortune-box {
+  background-color: #ffffff;
+  padding: 40px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  border: 3px solid transparent; 
+  transition: all 0.3s ease;
+}
+
+#fortuneText {
+  font-size: 24px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: transparent; 
+  color: inherit; 
+  transition: all 0.3s ease;
+}
+
+
+.color-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.btn-green {
+  background-color: #2ecc71;
+}
+
+.btn-red {
+  background-color: #e74c3c;
+}
+
+.btn-yellow {
+  background-color: #f1c40f;
+}
+
+.btn-blue {
+  background-color: #3498db;
+}
+
 
 
   /* Stopwatch Section */
@@ -85,12 +165,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
   padding: 20px;
 }
 
 .stopwatch-container {
-  background-color: white;
+  background-color: black;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -101,17 +181,17 @@
 
 .stopwatch-container h2 {
   margin-bottom: 30px;
-  color: #333;
+  color: #fff;
   font-size: 28px;
 }
 
 .timer-display {
   font-size: 60px;
   font-weight: bold;
-  margin: 20px 0;
+  margin:13px 0;
   padding: 20px;
   background-color: #f8f8f8;
-  border-radius: 8px;
+  border-radius: 28px;
   color: #333;
 }
 
@@ -123,7 +203,7 @@
 }
 
 .control-btn {
-  background-color: tomato;
+  background-color: rgb(224, 129, 112);
   color: white;
   border: none;
   border-radius: 5px;
@@ -131,11 +211,12 @@
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
+  
 }
 
 .control-btn:hover {
-  background-color: #e84c3d;
-  transform: translateY(-2px);
+  background-color: #e66358;
+  transform: translateY(-3px);
 }
 
 .control-btn:active {
@@ -143,7 +224,7 @@
 }
 
 #stopBtn {
-  background-color: #3498db;
+  background-color: #44a2e0;
 }
 
 #stopBtn:hover {
@@ -151,15 +232,21 @@
 }
 
 #resetBtn {
-  background-color: #7f8c8d;
+  background-color: #768b8d;
 }
 
 #resetBtn:hover {
-  background-color: #636e72;
+  background-color: #555e61;
 }
 
 .timer-info {
   color: #777;
   margin-top: 20px;
   font-size: 14px;
+}
+.footer-content{
+  background-color: #161616;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
 }
