@@ -8,7 +8,8 @@ const fortunes = [
     "A big life change will bring happiness.",
     "Your kindness will be rewarded threefold.",
     "An exciting adventure lies in your near future.",
-    "Success is yours if you stay determined."
+    "Success is yours if you stay determined.",
+    "Kill a Rapist, Save a Woman."
 ];
 
 // Random Fortunes will be generated 
