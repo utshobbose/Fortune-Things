@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!isRunning) {
             isRunning = true;
             timer = setInterval(function() {
-                secondsCount++;  // Increment every second
-                updateDisplay(); // Update display based on nearest multiple of 3
-            }, 1000); // 1-second interval
+                secondsCount++; 
+                updateDisplay(); 
+            }, 1000); // 
         }
     }
                 
