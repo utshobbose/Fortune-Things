@@ -29,15 +29,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 secondsCount++; 
                 updateDisplay(); 
                 
-                
-        // Check if we've reached 30 seconds
-        if (secondsCount >= 30) {
-            clearInterval(timer);  
-            isRunning = false;  // Stop the timer at 30 seconds
+                // Check if we've reached 30 seconds
+                if (secondsCount * 3 >= 30) {
+                    clearInterval(timer);  
+                    isRunning = false;  // Stop the timer at 30 seconds
+                }
+            }, 1000); 
         }
-        }, 1000); 
     }
-}
 
                 
     function stopTimer() {
