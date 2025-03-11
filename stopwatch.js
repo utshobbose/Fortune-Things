@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
     function updateDisplay() {
-        // Display the nearest multiple of 3
+       
         timerDisplay.textContent = secondsCount * 3;
     }
 
