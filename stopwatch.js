@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
     function updateDisplay() {
-       
+
         timerDisplay.textContent = secondsCount * 3;
     }
 
@@ -28,9 +28,17 @@ document.addEventListener('DOMContentLoaded', function() {
             timer = setInterval(function() {
                 secondsCount++; 
                 updateDisplay(); 
-            }, 1000); // 
+                
+                
+        // Check if we've reached 30 seconds
+        if (secondsCount >= 30) {
+            clearInterval(timer);  
+            isRunning = false;  // Stop the timer at 30 seconds
         }
+        }, 1000); 
     }
+}
+
                 
     function stopTimer() {
         if (isRunning) {
