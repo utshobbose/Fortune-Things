@@ -18,46 +18,30 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
     function updateDisplay() {
-        timerDisplay.textContent = secondsCount < 10 ? '0' + secondsCount : secondsCount;
+        // Display the nearest multiple of 3
+        timerDisplay.textContent = Math.ceil(secondsCount / 3) * 3;
     }
-    
 
     function startTimer() {
         if (!isRunning) {
             isRunning = true;
-            
-            // Use setInterval to increment the timer every 3 seconds
             timer = setInterval(function() {
-                // Increment by 3 seconds
-                secondsCount += 3;
-                
-
-                updateDisplay();
-                
-                // Check if we've reached 30 seconds
-                if (secondsCount >= 30) {
-                    clearInterval(timer);  
-                    isRunning = false;  // Stop the timer at 30 seconds
-                }
-            }, 3000); 
+                secondsCount++;  // Increment every second
+                updateDisplay(); // Update display based on nearest multiple of 3
+            }, 1000); // 1-second interval
         }
     }
-
+                
     function stopTimer() {
         if (isRunning) {
             clearInterval(timer);
             isRunning = false;
         }
     }
-    
 
     function resetTimer() {
-       
-        stopTimer();   // Stop the timer if it's running
-        
-
-        secondsCount = 0;  // Reset the seconds count
-        
+        stopTimer();
+        secondsCount = 0;
         updateDisplay();
     }
     
