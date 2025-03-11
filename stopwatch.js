@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const resetBtn = document.getElementById('resetBtn');
 
     let timer = null;
-    let secondsCount = 0;
+    let secondsCount = 3;
     let isRunning = false;
     
 
