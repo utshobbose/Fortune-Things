@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelector('.smooth-scroll').addEventListener('click', function(e) {
         e.preventDefault();
-        const targetId = this.getAttribute('href');
+        const targetId = this.getAttribute('href'); //href: /index.html#stopwatch || (Just did this to see how Javascript works for scroll behavior that used in css)
         const targetSection = document.querySelector(targetId);
         targetSection.scrollIntoView({ behavior: 'smooth' });
     });
