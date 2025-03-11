@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const resetBtn = document.getElementById('resetBtn');
 
     let timer = null;
-    let secondsCount = 3;
+    let secondsCount = 0;
     let isRunning = false;
     
 
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateDisplay() {
         // Display the nearest multiple of 3
-        timerDisplay.textContent = Math.ceil(secondsCount / 3) * 3;
+        timerDisplay.textContent = secondsCount * 3;
     }
 
     function startTimer() {
